@@ -312,3 +312,32 @@ function sortAlphabatically()
         console.log(sorting)
 }
 sortAlphabatically();
+function sortByStateCityZip() {
+  const prompt = require("prompt-sync")();
+  try {
+      console.log("\n1: City \n2: State \n3: zip")
+      let choice = prompt("Enter the Number : ");
+      switch (choice) 
+      {
+          case 1:
+              let sorti = contacts.sort((x, y) => x.city > y.city ? 1 : -1).map((contact) => contact.toString());
+              console.log(sorti)
+              break;
+          case 2:
+              let sortbyState = contacts.sort((x, y) => x.state > y.state ? 1 : -1).map((contact) => contact.toString());
+              console.log(sortbyState)
+              break;
+          case 3:
+              let sortbyzip = contacts.sort((x, y) => x.zip > y.zip ? 1 : -1).map((contact) => contact.toString());
+              console.log(sortbyzip)        
+              break;
+          default:
+          console.log("Invalid input")
+          break;    
+      }
+  }
+  catch(ex) {
+      console.error(ex);
+  }
+}
+sortByStateCityZip();
