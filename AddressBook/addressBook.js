@@ -287,3 +287,15 @@ function countOfContact(){
   console.log("Number of contact in address Book: "+num)
 }
 countOfContact();
+function findByCityName(){
+  let city = "Hyderabad";
+  let find = contacts.filter((contact)=>contact.city==city).map(contact=>contact.toString());
+  console.log(find)
+}
+findByCityName()
+function findByStateName(){
+  let state = "Tamilnadu";
+  let find = contacts.filter((contact)=>contact.state==state).map(contact=>contact.toString());
+  console.log(find)
+}
+findByStateName()
