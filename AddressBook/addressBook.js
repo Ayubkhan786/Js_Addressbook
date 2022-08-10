@@ -269,3 +269,16 @@ function findEdit() {
 }
 findEdit();
 Display();
+function findDelete() {
+  try {
+      let name = "Nithish"
+      const index = contacts.findIndex((contact) => contact.firstName == name);
+      if (index != -1)
+      contacts.splice(index, 1);
+  } catch (ex)
+  {
+      console.error(ex);
+  }
+}
+findDelete() ;
+Display();
