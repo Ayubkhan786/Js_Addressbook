@@ -306,3 +306,9 @@ function countByCityOrState()
     console.log(count)
 }
 countByCityOrState();
+function sortAlphabatically()
+{
+    let sorting=contacts.sort((x, y) => x.firstName > y.firstName ? 1 : -1).map((contact)=>contact.toString());
+        console.log(sorting)
+}
+sortAlphabatically();
