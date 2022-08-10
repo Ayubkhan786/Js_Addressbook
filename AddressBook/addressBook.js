@@ -282,3 +282,8 @@ function findDelete() {
 }
 findDelete() ;
 Display();
+function countOfContact(){
+  let num = contacts.reduce((contact)=>contact+1,0);
+  console.log("Number of contact in address Book: "+num)
+}
+countOfContact();
