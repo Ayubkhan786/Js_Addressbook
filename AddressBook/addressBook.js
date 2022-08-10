@@ -292,10 +292,17 @@ function findByCityName(){
   let find = contacts.filter((contact)=>contact.city==city).map(contact=>contact.toString());
   console.log(find)
 }
-findByCityName()
+findByCityName();
 function findByStateName(){
   let state = "Tamilnadu";
   let find = contacts.filter((contact)=>contact.state==state).map(contact=>contact.toString());
   console.log(find)
 }
-findByStateName()
+findByStateName();
+function countByCityOrState()
+{
+    let cityOrState = "Tamilnadu";
+    let count = contacts.filter((contact)=>contact.city==cityOrState || contact.state==cityOrState).reduce((contact)=>contact+1,0)
+    console.log(count)
+}
+countByCityOrState();
