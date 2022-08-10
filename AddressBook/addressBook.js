@@ -205,3 +205,67 @@ function Display() {
   }
 }
 Display();
+function findEdit() {
+  const prompt = require("prompt-sync")();
+  try {
+    let name = "Nithish";
+    contacts.forEach((contat) => {
+      if (contat._firstName == name) {
+        console.log(contat.toString());
+        console.log(
+          "\n 1: First Name \n2: Last Name \n3: Address \n4: City \n5: State \n6: Zipcode \n7: Phone Number \n8: Email Address"
+        );
+        let choice = prompt("Enter the Number : ");
+        switch (choice) {
+          case 1:
+            let newFirstName = "Mohamed";
+            contat._firstName = newFirstName;
+            console.log("Edited sucessfully");
+            break;
+          case 2:
+            let newLastName = "Abdul";
+            contat._lastName = newLastName;
+            console.log("Edited sucessfully");
+            break;
+          case 3:
+            let newAddress = "Charminar";
+            contat._address = newAddress;
+            console.log("Edited sucessfully");
+            break;
+          case 4:
+            let newCity = "Hyderabad";
+            contat._city = newCity;
+            console.log("Edited sucessfully");
+            break;
+          case 5:
+            let newState = "Telangana";
+            contat._state = newState;
+            console.log("Edited sucessfully");
+            break;
+          case 6:
+            let newZip = 985624;
+            contat._zip = newZip;
+            console.log("Edited sucessfully");
+            break;
+          case 7:
+            let newPhoneNum = 9632145874;
+            contat._phoneNumber = newPhoneNum;
+            console.log("Edited sucessfully");
+            break;
+          case 8:
+            let newEmailId = "mohamed@gmail.com";
+            contat._email = newEmailId;
+            console.log("Edited sucessfully");
+            break;
+          default:
+            console.log("\n> Invalid Option!!");
+            break;
+        }
+      }
+    });
+  } catch (e) {
+    console.error(e);
+  }
+}
+findEdit();
+Display();
